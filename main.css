@@ -1,0 +1,82 @@
+body {
+    background: #ccc;
+}
+
+.wrapper {
+    background-color: #ddd;
+    height: 100px;
+    display: flex;
+    width: 500px;
+    position: absolute;
+    box-sizing: border-box;
+    border-radius: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    animation-name: drop;
+    animation-duration: 5s; 
+    animation-timing-function: linear;
+    animation-delay: 22s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+h3 {
+    position: absolute;
+    top: 100%;
+    left: 35%;
+    color: brown;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 40%;
+    left: 9%;
+    display: flex;
+    width: 400px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 25px;
+}
+
+.bar {
+    position: absolute;
+    background-color: black;
+    opacity: 0.8;
+    height: 20px;
+    width: 200px;
+    border-radius: 25px;
+    top: 3%;
+    display: flex;
+    animation: progress 20s 1 forwards;
+    animation-timing-function: linear;
+}
+
+@keyframes progress {
+    from{width: 1px;}
+    to{width: 400px;}
+}
+
+@keyframes drop {
+    from{opacity: 1;}
+    to{opacity: 0;}
+}
+
+.greet {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-25%);
+    opacity: 0;
+    animation-name: appear;
+    animation-timing-function: linear;
+    animation-duration: 4s;
+    animation-delay: 25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes appear {
+    from{opacity: 0; font-size: 20px;}
+    to{opacity: 1; font-size: 58px;}
+}
